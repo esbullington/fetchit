@@ -1,0 +1,35 @@
+{
+  "name": "fetchit",
+  "version": "0.0.1",
+  "description": "Implementation of fetch API with stream support",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mkdirp build/development && ncp config/test.html build/development/test.html && watchify -t babelify -d -v -o build/development/tests.js tests/index.js & nodemon server.js ",
+    "build": "mkdirp build/production && browserify -t babelify -o build/production/fido.js src/index.js",
+    "watch": "mkdirp build/development && ncp config/index.html build/development/index.html && watchify -t babelify -d -v -o build/development/main.js src/index.js & nodemon server.js "
+  },
+  "keywords": [
+    "fetch",
+    "http"
+  ],
+  "author": "Eric S. Bullington",
+  "license": "MIT",
+  "devDependencies": {
+    "babelify": "^6.1.2",
+    "bintools": "^0.1.2",
+    "browserify": "^10.2.4",
+    "chai": "^3.0.0",
+    "chai-as-promised": "^5.1.0",
+    "errorhandler": "^1.4.1",
+    "express": "^4.13.1",
+    "mocha": "^2.2.5",
+    "ncp": "^2.0.0",
+    "nodemon": "^1.3.7",
+    "phantomjs": "^1.9.17",
+    "should": "^7.0.1",
+    "sinon": "^1.15.4",
+    "sinon-chai": "^2.8.0",
+    "uglifyify": "^3.0.1",
+    "watchify": "^3.2.3"
+  }
+}

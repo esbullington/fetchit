@@ -1,0 +1,12 @@
+## Fido: Binary streaming over XMLHttpRequest
+Inspired by W3C Fetch API.
+
+**Not production ready.  Not even non-production ready**
+
+### Tests
+All tests are run through the 
+
+### License
+MIT License
+
+Copyright 2015, Eric S. Bullington
